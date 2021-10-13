@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --grey: hsl(0, 0%, 36%);
+  --grey-shadow: hsla(0, 0%, 36%, 0.5);
+  --gold: #e7d48d;
+}
+
+/* 
+font-family: "Sacramento", cursive;
+
+*/
+body,
+p {
+  font-family: "Caladea", serif;
+  text-align: center;
+  color: white;
+  line-height: 2;
+}
+
+h1 {
+  font-family: "Charmonman", cursive;
+  font-size: 62px;
+  text-shadow: 2px 2px var(--grey-shadow);
+}
+
+h2 {
+  font-size: 20px;
+  font-style: italic;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+  text-shadow: 2px 2px var(--grey-shadow);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header {
+  padding: 50vh 20px 20vh;
+}
+
+#container {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+#web-header {
+  background: url("https://images.pexels.com/photos/998521/pexels-photo-998521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    no-repeat;
+  background-position: center;
+  object-fit: center;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 100vw;
+  height: 95vh;
+}
+
+#quran-quote {
+  padding: 40px;
+}
+
+#countdown-box {
+  width: 100vw;
+  position: relative;
+}
+
+#countdown-img {
+  background: url("https://images.pexels.com/photos/8287770/pexels-photo-8287770.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    no-repeat;
+  background-size: fill;
+  background-position: center;
+  height: 50vh;
+  position: relative;
+}
+
+#countdown-timer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  padding-top: 40px;
+}
+
+#countdown-img::before {
+  background-color: rgba(66, 60, 36, 0.8);
+  content: "";
+  position: absolute;
+  height: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#couple-identity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+
+#comment {
+  background-color: var(--grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 60vh;
+  flex-wrap: wrap;
+}
+
+#comment-wrap {
+  width: 300px;
+}
+
+#submit {
+  background-color: none;
+  border: 2px solid black;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+}
+.svg {
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.letter-spacing-p {
+  letter-spacing: 2px;
+}
+.bg-image {
+  width: 375px;
+}
+
+.bg-image img {
+  background-size: cover;
+}
+
+.dark-text {
+  color: var(--grey);
+}
+
+.instagram-button {
+  width: 150px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: var(--grey);
+}
+
+.identity-box {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.woman {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.woman p {
+  text-align: left;
+  line-height: 1.5;
+}
+
+.man {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.man p {
+  text-align: right;
+  line-height: 1.5;
+}
+.fa-heart {
+  font-size: 50px;
+  color: var(--gold);
+}
+
+@media screen and (max-width: 394px) {
+  #header h1 {
+    line-height: 1;
+  }
+}
