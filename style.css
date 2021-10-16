@@ -7,19 +7,17 @@
 :root {
   --grey: hsl(0, 0%, 36%);
   --grey-shadow: hsla(0, 0%, 36%, 0.5);
+  --dark-grey: hsl(0, 0%, 25%);
   --gold: #e7d48d;
 }
 
-/* 
-font-family: "Sacramento", cursive;
-
-*/
 body,
 p {
   font-family: "Caladea", serif;
   text-align: center;
   color: white;
   line-height: 2;
+  font-size: 1.25rem;
 }
 
 h1 {
@@ -29,12 +27,16 @@ h1 {
 }
 
 h2 {
+  font-family: "DM Serif Display", serif;
   font-size: 20px;
-  font-style: italic;
+  font-weight: 200;
 }
 
 h3 {
   font-size: 36px;
+  line-height: 1;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
 }
 
 li {
@@ -125,32 +127,66 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 80px;
   gap: 10px;
 }
 
 #comment {
-  background-color: var(--grey);
+  background-color: var(--dark-grey);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  height: 60vh;
+  padding: 50px 0px;
   flex-wrap: wrap;
 }
 
 #comment-wrap {
-  width: 300px;
+  width: 50vw;
+}
+
+#comment-header a {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+#nameBox,
+#commentBox {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, serif;
+  font-size: 14px;
+  padding: 10px;
+}
+
+#nameBox {
+  width: 50vw;
+  height: 40px;
+}
+
+#commentBox {
+  width: 50vw;
+  height: 250px;
 }
 
 #submit {
   background-color: none;
-  border: 2px solid black;
+  border: 2px solid var(--grey-shadow);
   padding: 10px;
-  width: 300px;
+  width: 25vw;
   border-radius: 5px;
+  font-weight: bold;
+  color: var(--dark-grey);
 }
+
+#submit:hover {
+  background-color: var(--gold);
+  box-shadow: 0px 0px 10px grey;
+}
+
 .svg {
   bottom: 0;
   left: 0;
@@ -182,14 +218,20 @@ main {
 }
 
 .identity-box {
-  width: 500px;
+  width: 50vw;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .woman {
   justify-content: flex-start;
   align-items: flex-start;
+  text-align: left;
+}
+
+.woman a {
+  text-align: center;
 }
 
 .woman p {
@@ -200,12 +242,18 @@ main {
 .man {
   justify-content: flex-end;
   align-items: flex-end;
+  text-align: right;
 }
 
 .man p {
   text-align: right;
   line-height: 1.5;
 }
+
+.man a {
+  text-align: center;
+}
+
 .fa-heart {
   font-size: 50px;
   color: var(--gold);
