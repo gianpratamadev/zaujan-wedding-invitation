@@ -11,7 +11,7 @@
     mm = String(today.getMonth() + 1).padStart(2, "0"),
     yyyy = today.getFullYear(),
     nextYear = yyyy + 1,
-    dayMonth = "11/12/",
+    dayMonth = "03/27/",
     birthday = dayMonth + yyyy;
 
   today = mm + "/" + dd + "/" + yyyy;
@@ -62,7 +62,7 @@ const firebaseConfig = {
   storageBucket: "comment-zaujan-130891.appspot.com",
   messagingSenderId: "1050319672349",
   appId: "1:1050319672349:web:41448e6b2801d87a9122f4",
-  measurementId: "G-0HQZZ0PD6R",
+  measurementId: "G-0HQZZ0PD6R"
 };
 
 // Initialize Firebase
@@ -76,7 +76,7 @@ import {
   set,
   child,
   update,
-  remove,
+  remove
 } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-database.js";
 
 const db = getDatabase();
@@ -95,7 +95,7 @@ function InsertData() {
     ? alert("Kolom komentar tidak boleh dikosongkan")
     : set(ref(db, nameBox.value), {
         userName: nameBox.value,
-        userComment: commentBox.value,
+        userComment: commentBox.value
       })
         .then(() => {
           alert("Pesan berhasil dikirim");
